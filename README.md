@@ -7,9 +7,10 @@ https://www.omdbapi.com/
 
 Requerimientos:
 
-- Necesita mostrar un input para buscar la película y un botón para buscar
-- Lista las películas encontradas y muestra el título, año y póster
-- Haz que las películas se muestren en un grid responsivo
+✅ Necesita mostrar un input para buscar la película y un botón para buscar
+✅ Lista las películas y muestra el título, año y póster
+- Hacer que el formulario funcione
+✅ Haz que las películas se muestren en un grid responsivo
 
 Luego:
 

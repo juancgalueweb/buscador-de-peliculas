@@ -1,4 +1,4 @@
-## Enunciado
+## Aprendiendo React con una prueba técnica típica
 
 Crea una aplicación para buscar películas
 

@@ -1,31 +1,26 @@
-import { useState } from 'react'
-import withoutResults from '../mocks/no-results.json'
-
-const API_KEY = import.meta.env.VITE_OMDB_API_KEY
+import { useRef, useState } from 'react'
+import { searchMovies } from '../services/movies'
 
 export function useMovies ({ search }) {
-  const [responseMovies, setResponseMovies] = useState([])
+  const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
+  const previousSearch = useRef(search)
 
-  const movies = responseMovies.Search
+  const getMovies = async () => {
+    // Evita consultar de nuevo la API si se busca la misma película
+    if (search === previousSearch.current) return
 
-  const mappedMovies = movies?.map((movie) => ({
-    id: movie.imdbID,
-    title: movie.Title,
-    year: movie.Year,
-    poster: movie.Poster
-  }))
-
-  const getMovies = () => {
-    if (search) {
-      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}`)
-        .then(res => res.json())
-        .then(json => {
-          setResponseMovies(json)
-        })
-    } else {
-      setResponseMovies(withoutResults)
+    try {
+      setLoading(true)
+      previousSearch.current = search
+      const newMovies = await searchMovies({ search })
+      setMovies(newMovies)
+    } catch (error) {
+      throw new Error('Error al buscar las películas')
+    } finally {
+      // Se ejecuta luego del try y del catch
+      setLoading(false)
     }
   }
-
-  return { movies: mappedMovies, getMovies }
+  return { movies, getMovies, loading }
 }

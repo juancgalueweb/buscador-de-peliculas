@@ -1,4 +1,4 @@
-import noPoster from '../../public/no-movie-poster.jpg'
+import noPoster from '../images/no-movie-poster.jpg'
 
 function ListOfMovies ({ movies }) {
   return (

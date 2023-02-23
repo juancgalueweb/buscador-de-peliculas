@@ -2,9 +2,9 @@ import noPoster from '../../public/no-movie-poster.jpg'
 
 function ListOfMovies ({ movies }) {
   return (
-    <ul>
+    <ul className='movies'>
       {movies.map((movie) => (
-        <li key={movie.id} style={{ listStyle: 'none' }}>
+        <li className='movie' key={movie.id}>
           <h3>{movie.title}</h3>
           <p>{movie.year}</p>
           {movie.poster === 'N/A'

@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 768px;
 }
 
 h1 {
@@ -22,21 +24,29 @@ form input {
 main {
   display: flex;
   justify-content: center;
-  width: 768px
+  width: 100%;
 }
 
-ul>li {
-  margin: 32px auto;
-  padding: 16px;
-  border-radius: 5px;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.movies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
 }
 
-ul>li>img {
-  height: auto;
-  width: 300px;
-  align-self: center;
+.movie {
+  text-align: center;
+}
+
+.movie h3,
+.movie p {
+  margin: 0
+}
+
+.movie img {
+  border-radius: 8px;
+  margin-top: 16px;
 }

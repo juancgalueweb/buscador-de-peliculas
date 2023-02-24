@@ -26,7 +26,7 @@ function ListOfMovies ({ movies }) {
 
 function NoMoviesResults () {
   return (
-    <p>No se ha realizado una búsqueda</p>
+    <p>No hay resultados para esta búsqueda</p>
   )
 }
 

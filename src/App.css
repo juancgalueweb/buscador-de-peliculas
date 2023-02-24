@@ -39,6 +39,9 @@ main {
 
 .movie {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .movie h3,
@@ -49,4 +52,5 @@ main {
 .movie img {
   border-radius: 8px;
   margin-top: 16px;
+  align-self: end;
 }

@@ -5,15 +5,19 @@ function ListOfMovies ({ movies }) {
     <ul className='movies'>
       {movies.map((movie) => (
         <li className='movie' key={movie.id}>
-          <h3>{movie.title}</h3>
-          <p>{movie.year}</p>
-          {movie.poster === 'N/A'
-            ? (
-              <img src={noPoster} alt='Movie with no poster available' />
-              )
-            : (
-              <img src={movie.poster} alt={movie.title} />
-              )}
+          <div>
+            <h3>{movie.title}</h3>
+            <p>{movie.year}</p>
+          </div>
+          <div>
+            {movie.poster === 'N/A'
+              ? (
+                <img src={noPoster} alt='Movie with no poster available' />
+                )
+              : (
+                <img src={movie.poster} alt={movie.title} />
+                )}
+          </div>
         </li>
       ))}
     </ul>

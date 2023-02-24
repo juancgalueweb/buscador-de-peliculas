@@ -1,13 +1,16 @@
-import { useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import { searchMovies } from '../services/movies'
 
-export function useMovies ({ search }) {
+export function useMovies ({ search, sort }) {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(false)
   const previousSearch = useRef(search)
 
-  const getMovies = async () => {
-    // Evita consultar de nuevo la API si se busca la misma película
+  /**
+   * El useCallback hace lo mismo que el useMemo,
+   * pero está pensado solo para funciones
+   * */
+  const getMovies = useCallback(async ({ search }) => {
     if (search === previousSearch.current) return
 
     try {
@@ -21,6 +24,17 @@ export function useMovies ({ search }) {
       // Se ejecuta luego del try y del catch
       setLoading(false)
     }
-  }
-  return { movies, getMovies, loading }
+  }, [])
+
+  /**
+   * Solo ejecuta la función cuando cambia el sort o movies.
+   * De resto, guarda la función en la variable sortedMovies
+   * */
+  const sortedMovies = useMemo(() => {
+    return sort
+      ? [...movies].sort((a, b) => a.title.localeCompare(b.title))
+      : movies
+  }, [sort, movies])
+
+  return { movies: sortedMovies, getMovies, loading }
 }

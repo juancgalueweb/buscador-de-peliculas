@@ -23,22 +23,26 @@ function ListOfMovies ({ movies }) {
             {movie.type === 'movie'
               ? (
                 <div className='movie-type'>
-                  <p>{movie.type}</p>
+                  <p>Type: {movie.type}</p>
                   <BiCameraMovie className='movie-icons' />
                 </div>)
               : movie.type === 'series'
                 ? (
                   <div className='movie-type'>
-                    <p>{movie.type}</p>
+                    <p>Type: {movie.type}</p>
                     <GiFilmStrip className='movie-icons' />
                   </div>
                   )
-                : (
-                  <div className='movie-type'>
-                    <p>{movie.type}</p>
-                    <FaGamepad className='movie-icons' />
-                  </div>
-                  )}
+                : movie.type === 'game'
+                  ? (
+                    <div className='movie-type'>
+                      <p>Type: {movie.type}</p>
+                      <FaGamepad className='movie-icons' />
+                    </div>
+                    )
+                  : (
+                    <p>Type: {movie.type}</p>
+                    )}
           </div>
         </li>
       ))}

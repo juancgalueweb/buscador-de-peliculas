@@ -54,3 +54,16 @@ main {
   margin-top: 16px;
   align-self: end;
 }
+
+.movie-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-icons {
+  margin-left: 10px;
+  color: lightgray;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}

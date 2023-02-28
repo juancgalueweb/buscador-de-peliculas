@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 
-export function useSearch () {
+export function useSearch() {
   const [search, updateSearch] = useState('')
   const [error, setError] = useState(null)
   const isFirstInput = useRef(true)
 
   useEffect(() => {
     /**
-    * Valida que sea la primera vez que se usa el Input
-    * Esto para evitar que de entrada se muestre el error de:
-    * 'No se puede buscar una película vacía'
-    */
+     * Valida que sea la primera vez que se usa el Input
+     * Esto para evitar que de entrada se muestre el error de:
+     * 'No se puede buscar una película vacía'
+     */
 
     if (isFirstInput.current) {
       isFirstInput.current = search === ''

@@ -28,7 +28,7 @@ form {
 }
 
 form input {
-  width: 400px
+  width: 400px;
 }
 
 main {
@@ -56,7 +56,7 @@ main {
 
 .movie h3,
 .movie p {
-  margin: 0
+  margin: 0;
 }
 
 .movie img {
@@ -90,5 +90,5 @@ main {
 }
 
 .home-link {
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }

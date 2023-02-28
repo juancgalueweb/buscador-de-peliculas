@@ -37,7 +37,7 @@ function SearchWhileWriting() {
     <AppWrapper>
       <div className='page'>
         <section>
-          <h1>Buscador de películas mientras se escribe</h1>
+          <h1>Buscador de películas al escribir</h1>
           <form onSubmit={handleSubmit}>
             <input
               value={search}

@@ -27,7 +27,7 @@ export const SearchWithAButton = () => {
     <AppWrapper>
       <div className='page'>
         <section>
-          <h1>Buscador de películas mediante un botón</h1>
+          <h1>Buscador de películas usando un botón</h1>
           <form onSubmit={handleSubmit}>
             <input
               value={search}

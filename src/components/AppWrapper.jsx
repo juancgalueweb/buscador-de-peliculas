@@ -2,8 +2,6 @@ import { AiFillHome } from 'react-icons/ai'
 import '../App.css'
 
 export const AppWrapper = ({ children }) => {
-  const a = 'Error a drede'
-
   return (
     <>
       <header className='app-header'>

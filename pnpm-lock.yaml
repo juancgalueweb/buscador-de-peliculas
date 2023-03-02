@@ -12,6 +12,7 @@ specifiers:
   eslint-plugin-promise: ^6.1.1
   eslint-plugin-react: ^7.32.2
   husky: ^8.0.3
+  just-debounce-it: 3.2.0
   next: 13.2.2
   postcss: ^8.4.21
   prettier: ^2.8.4
@@ -23,6 +24,7 @@ specifiers:
 
 dependencies:
   eslint-config-next: 13.2.2_ycpbpc6yetojsgtrx3mwntkhsu
+  just-debounce-it: 3.2.0
   next: 13.2.2_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -1678,6 +1680,10 @@ packages:
     dependencies:
       array-includes: 3.1.6
       object.assign: 4.1.4
+
+  /just-debounce-it/3.2.0:
+    resolution: {integrity: sha512-WXzwLL0745uNuedrCsCs3rpmfD6DBaf7uuVwaq98/8dafURfgQaBsSpjiPp5+CW6Vjltwy9cOGI6qE71b3T8iQ==}
+    dev: false
 
   /language-subtag-registry/0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}

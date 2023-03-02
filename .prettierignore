@@ -3,4 +3,4 @@ pnpm-lock.yaml
 public
 node_modules
 yarn.lock
-dist
+.next

@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env.VITE_OMDB_API_KEY
+const API_KEY = process.env.NEXT_PUBLIC_OMDB_API_KEY
 
 export const searchMovies = async ({ search }) => {
   if (search === '') return null

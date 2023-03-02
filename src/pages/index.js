@@ -1,14 +1,21 @@
-import '../App.css'
-import { AppWrapper } from './AppWrapper'
+import AppWrapper from '@/components/AppWrapper'
 
-export const Home = () => {
+const Home = () => {
   return (
-    <AppWrapper>
-      <div className='page'>
-        <h1>Home</h1>
+    <AppWrapper
+      title='Página inicial'
+      description='Página inicial de app que busca películas en una BD gratis'
+    >
+      <div className='flex flex-col justify-center'>
+        <h1 className='text-center font-bold text-3xl mb-6'>Home</h1>
         <p>
           Esta app te permite buscar películas consultando la API gratis de{' '}
-          <a href='https://www.omdbapi.com/' target='_blank' rel='noreferrer'>
+          <a
+            href='https://www.omdbapi.com/'
+            target='_blank'
+            rel='noreferrer'
+            className='text-blue-600 hover:underline hover:underline-offset-2'
+          >
             OMDB Api
           </a>
           .
@@ -19,6 +26,7 @@ export const Home = () => {
             href='https://github.com/juancgalueweb/buscador-de-peliculas'
             target='_blank'
             rel='noreferrer'
+            className='text-blue-600 hover:underline hover:underline-offset-2'
           >
             Github
           </a>
@@ -33,3 +41,5 @@ export const Home = () => {
     </AppWrapper>
   )
 }
+
+export default Home

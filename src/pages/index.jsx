@@ -3,7 +3,7 @@ import AppWrapper from '@/components/AppWrapper'
 const Home = () => {
   return (
     <AppWrapper
-      title='Página inicial'
+      title='Buscador de películas'
       description='Página inicial de app que busca películas en una BD gratis'
     >
       <div className='flex flex-col justify-center'>

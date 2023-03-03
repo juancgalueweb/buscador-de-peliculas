@@ -31,7 +31,7 @@ const SearchWhileWriting = () => {
 
   return (
     <AppWrapper
-      title='Búsqueda al escribir'
+      title='Buscar pelis al escribir'
       description='Permite la búsqueda de las películas mientras se escribe'
     >
       <div className='flex flex-col justify-center'>

@@ -26,7 +26,7 @@ const SearchWithAButton = () => {
 
   return (
     <AppWrapper
-      title='Búsqueda por botón'
+      title='Buscar pelis por botón'
       description='Permite la búsqueda de las películas haciendo click en el botón de búsqueda'
     >
       <div className='flex flex-col justify-center'>

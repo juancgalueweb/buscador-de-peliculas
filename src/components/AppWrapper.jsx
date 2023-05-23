@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { AiFillHome } from 'react-icons/ai'
-import Footer from './Footer'
 
 const AppWrapper = ({ children, title, description }) => {
   const { pathname } = useRouter()
@@ -44,7 +43,6 @@ const AppWrapper = ({ children, title, description }) => {
       <section className='max-w-3xl mx-auto py-10 min-h-screen px-2'>
         {children}
       </section>
-      <Footer />
     </>
   )
 }
